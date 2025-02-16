@@ -101,69 +101,6 @@ Dataset/
 └── orientals/
 ```
 
-## 💻 Implementation Details
-
-### 📚 Components
-
-#### 1. Dataset Class (FaceDataset)
-* 📥 Handles loading and preprocessing of facial images
-* 🏷️ Supports three ethnic groups with label encoding
-* 🔄 Includes data transformations and augmentation
-
-#### 2. Model Architecture (UNet)
-* ⏱️ Incorporates time embeddings for diffusion process
-* 🎛️ Includes label conditioning for ethnic control
-* 🔗 Features skip connections and up/down sampling paths
-
-#### 3. Diffusion Process
-* 📊 Manages noise schedule and sampling procedure
-* 🎯 Implements classifier-free guidance
-* 🎨 Controls image generation process
-
-#### 4. Training Pipeline
-* 🔄 250 epochs training configuration
-* ⚙️ Adam optimizer with learning rate 1e-4
-* 📈 Progress tracking and checkpoint saving
-
-## 📝 Usage
-
-### 1. Open Jupyter Notebook
-```bash
-jupyter notebook Face_Generation_Diffusion.ipynb
-```
-
-### 2. Update Dataset Paths
-```python
-european_path = "path/to/european"
-indian_path = "path/to/indian"
-oriental_path = "path/to/orientals"
-```
-
-### 3. Run Notebook
-* ▶️ Run all cells sequentially
-
-## 🎯 Results
-
-The model generates:
-* 👤 Pure ethnic facial features
-* 🔄 Two-way combinations:
-  * 🔹 Oriental-Indian
-  * 🔹 Oriental-European
-  * 🔹 Indian-European
-* 🔀 Three-way ethnic combinations
-
-## 📦 Dependencies
-```
-torch >= 1.7.0
-torchvision
-numpy
-Pillow
-tqdm
-matplotlib
-IPython
-jupyter
-```
-
 ## 📚 Citation
 ```bibtex
 @misc{manne2024face,
